@@ -1563,292 +1563,463 @@
       background-image: url(https://images.pexels.com/photos/120049/pexels-photo-120049.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
       background-size: cover;
     }
-    .add:hover{
-      color: #fff;
-      
+  
+    
+    @media (max-width: 768px) {
+       .business-hours{ justify-content: center;align-items: center ;
+      }
     }
-    .nav-button:hover{ background: linear-gradient(to bottom left, #8b5cf6, #d946ef);}
+    
   </style>
   </head>
-  <body class="">
+
+  <body class="antialiased text-gray-800 min-h-screen flex flex-col">
+    <!-- Skip to main content link for accessibility -->
+    <a href="#"
+      class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-white focus:text-black">
+      Skip to main content
+    </a>
+
+    <!-- Header -->
+    <header class="relative z-50 bg-white dark:bg-gray-900">
+      <!-- Header content goes here -->
+    </header>
+
+    <!-- Main content area -->
+    <main id="main-content" class="flex-1 relative h-full">
+      <!-- Content will be injected here -->
+    </main>
+
     <!-- navbar -->
 
     <div id="root">
-        <section id="header" class="relative">
-            <nav class="fixed w-full z-50 bg-neutral-900/95 backdrop-blur-sm">
-                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div class="flex justify-between items-center h-16">
-                        <div class="flex-shrink-0">
-                            <a href="index.html"
-                                class="text-white font-bold text-xl">A5
-                                Tint</a>
-                        </div>
-
-                        <div class="hidden md:block">
-                            <div class="ml-10 flex items-center space-x-4">
-                                <a href="index.html#hero"
-                                    class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
-                                <a href="services.html"
-                                    class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Services</a>
-
-                                <a href="about.html"
-                                    class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
-
-                                <!-- <a href="index.html#about"
-                                    class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a> -->
-                                <a href="contact.html"
-                                    class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
-
-                                <a href="booking.html"
-                                    class="inline-block bg-gradient-to-bl from-cyan-300 to-blue-900 text-white font-semibold px-3 py-2 rounded-lg  nav-button" >
-                                    Start Your Project
-                                   </a>
-                            </div>
-                        </div>
-
-                        <div class="md:hidden">
-                            <button id="menuBtn"
-                                class="text-gray-400 hover:text-white focus:outline-none">
-                                <svg class="h-6 w-6" fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor">
-                                    <path stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                        d="M4 6h16M4 12h16M4 18h16">
-                                    </path>
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
+      <section id="header" class="relative">
+        <nav class="fixed w-full z-50 bg-neutral-900/95 backdrop-blur-sm">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+              <div class="flex-shrink-0">
+                <a href="index.html" class="text-white font-bold text-xl">A5 Tint</a>
+              </div>
+    
+              <div class="hidden md:flex items-center space-x-4">
+                <a href="index.html"
+                  class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors home">Home</a>
+    
+                <!-- Services Dropdown -->
+                <div class="relative group" id="dropdownContainer">
+                  <button  id="dropdownButton" class="text-gray-300 hover:text-white px-4 py-2 rounded-lg focus:outline-none service">
+                    Services
+                  </button>
+                  <!-- Dropdown Menu -->
+                  <div id="dropdownMenu"
+                    class="absolute left-0 mt-3 w-60 bg-white border rounded-lg shadow-lg opacity-0 invisible transition-opacity duration-300 group-hover:opacity-100 group-hover:visible">
+                    <a href="automotive-tinting.html" class="block px-4 py-1 pt-4 ">Automotive Tinting</a>
+                    <a href="residential-tinting.html" class="block px-4 py-1  ">Commercial & Residential Tinting</a>
+                    <a href="#" class="block px-4 py-1 text-red-500 ">Paint protaction Film</a>
+                    <a href="ceramic-coating.html" class="block px-4 py-1 ">Ceramic Coating</a>
+                    <a href="car-detaling.html" class="block px-4 py-1 ">Car Detailing</a>
+                    <a href="custom-wrap.html" class="block px-4 py-1 pb-4 ">Customw Wraps</a>
+                  </div>
                 </div>
-
-                <!-- Mobile menu -->
-                <div id="mobileMenu" class="hidden md:hidden bg-neutral-900">
-                    <div class="px-2 pt-2 pb-3 space-y-1">
-                        <a href="index.html#hero"
-                            class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Home</a>
-                        <a href="services.html"
-                            class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Services</a>
-
-                        <a href="about.html"
-                            class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About</a>
-
-                        <!-- <a href
-                            class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About</a> -->
-                        <a href="contact.html"
-                            class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact</a>
-                        <a href="booking.html"
-                            class="inline-block bg-gradient-to-bl from-cyan-300 to-blue-900 text-white font-semibold px-3 py-2 rounded-lg  nav-button" >
-                            Start Your Project
-                           </a>
-                    </div>
-                </div>
-            </nav>
-
-            <!-- <div class="min-h-[70vh] bg-neutral-900 flex items-center">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div class="text-center">
-            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 animate__animated animate__fadeIn">
-              Professional Window Tinting Services
-            </h1>
-            <p class="text-xl text-gray-300 mb-8 animate__animated animate__fadeIn animate__delay-1s">
-              Premium Quality &amp; Expert Installation
-            </p>
-            <div class="animate__animated animate__fadeIn animate__delay-2s">
-              <a href="https://oshawa-tint-pro6gf6.rollout.site/contact" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-lg transition-colors inline-block">
-                Get Free Quote
-              </a>
+    
+                <a href="about.html"
+                  class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors about">About</a>
+    
+                <a href="contact.html"
+                  class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors contact">Contact</a>
+    
+                <a href="booking.html"
+                  class="inline-block hover:text-white text-gray-300 text-sm font-medium px-3 py-2 rounded-lg nav-button">
+                  Start Your Project
+                </a>
+              </div>
+    
+              <div class="md:hidden">
+                <button id="menuBtn" class="text-gray-400 hover:text-white focus:outline-none">
+                  <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M4 6h16M4 12h16M4 18h16"></path>
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-      </div> -->
-        </section>
+    
+          <!-- Mobile menu -->
+<div id="mobileMenu" class="hidden md:hidden bg-neutral-900">
+  <div class="px-2 pt-2 pb-3 space-y-1">
+    <a href="index.html" class="text-gray-300 hover:text-red-500 block px-3 py-2 rounded-md text-base font-medium">Home</a>
 
-        <script>
+    <!-- Dropdown Menu -->
+    <div class="relative">
+      <!-- Dropdown Button -->
+      <button class="dropdown-btn flex justify-between items-center w-full px-3 py-2  text-white rounded-lg focus:outline-none focus:text-yellow-500 focus:font-semibold">
+        Services
+        <svg class="dropdown-arrow w-4 h-4 transition-transform duration-300 ease-in-out" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+
+      <!-- Dropdown Content -->
+      <ul class="dropdown-menu hidden bg-neutral-900  rounded-lg text-white font-medium w-full mt-1 ">
+        <li><a href="automotive-tinting.html" class="block mx-8 py-2  ">Window Tinting</a></li>
+        <li><a href="residential-tinting.html" class="block mx-8 py-2 ">Commercial & Residential Tinting</a></li>
+        <li><a href="#" class="block mx-8 py-2 text-red-500">Paint protaction Film</a></li>
+        <li><a href="ceramic-coating.html" class="block mx-8 py-2 ">Ceramic Coating</a></li>
+        <li><a href="car-detaling.html" class="block mx-8 py-2 ">Car Detailing</a></li>
+        <li><a href="custom-wrap.html" class="block mx-8 py-2 ">Customw Wraps</a></li>
+      </ul>
+    </div>
+
+    <a href="about.html" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About us</a>
+    <a href="contact.html" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+    <a href="booking.html" class="inline-block text-gray-300 hover:font-medium px-3 py-2 rounded-lg">Start Your Project</a>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll(".dropdown-btn").forEach((btn) => {
+    btn.addEventListener("click", function (event) {
+      event.stopPropagation();
+      
+      const dropdownMenu = this.nextElementSibling;
+      const dropdownArrow = this.querySelector(".dropdown-arrow");
+
+      const isOpen = !dropdownMenu.classList.contains("hidden");
+
+      // Close all dropdowns first
+      document.querySelectorAll(".dropdown-menu").forEach(menu => {
+        menu.classList.add("hidden");
+      });
+      document.querySelectorAll(".dropdown-arrow").forEach(arrow => {
+        arrow.classList.remove("rotate-180");
+      });
+
+      // Open the clicked dropdown if it was closed
+      if (!isOpen) {
+        dropdownMenu.classList.remove("hidden");
+        dropdownArrow.classList.add("rotate-180");
+      }
+    });
+  });
+
+  // Close dropdowns when clicking outside
+  document.addEventListener("click", () => {
+    document.querySelectorAll(".dropdown-menu").forEach(menu => menu.classList.add("hidden"));
+    document.querySelectorAll(".dropdown-arrow").forEach(arrow => arrow.classList.remove("rotate-180"));
+  });
+</script>
+
+        </nav>
+      </section>
+    
+      <script>
         const menuBtn = document.getElementById('menuBtn');
         const mobileMenu = document.getElementById('mobileMenu');
-  
+    
         menuBtn.addEventListener('click', () => {
           mobileMenu.classList.toggle('hidden');
         });
-  
+    
         // Close mobile menu when clicking outside
         document.addEventListener('click', (e) => {
           if (!menuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
             mobileMenu.classList.add('hidden');
           }
         });
+         // Dropdown Menu Behavior
+    dropdownContainer.addEventListener('mouseenter', () => {
+      clearTimeout(timeout); // Cancel hiding if mouse re-enters
+      dropdownMenu.classList.remove('opacity-0', 'invisible');
+    });
+
+    dropdownContainer.addEventListener('mouseleave', () => {
+      timeout = setTimeout(() => {
+        dropdownMenu.classList.add('opacity-0', 'invisible');
+      }, 300); // Delay hiding by 0.3s
+    });
+        
       </script>
     </div>
-    <!-- services -->
-    <section class=" text-white pt-20 pb-6 mb-10">
-        <div class="container mx-auto text-center">
-            <h2 class="text-4xl font-bold mb-8 text-black">Paint Protection</h2>
-            <p class="max-w-2xl mx-auto mb-12 text-black">
-                Shield and preserve your vehicle’s paint with our professional paint protection film, ensuring a flawless finish and long-lasting defense against damage.
-            </p>
     
-            <div class="grid lg:grid-cols-2 gap-8 px-6">
+    
+    <style>
+      .service{
+        display: inline;
+        border-bottom: 3px solid rgb(241, 12, 23); 
+        border-radius: 5px; 
+        padding-bottom: 2px; 
+        transition: 0.3s;}
+      .about:hover{
+        display: inline;
+        border-bottom: 3px solid rgb(241, 12, 23); 
+        border-radius: 5px; 
+        padding-bottom: 2px; 
+        transition: 0.3s;}
+      .contact:hover{
+        display: inline;
+        border-bottom: 3px solid rgb(241, 12, 23); 
+        border-radius: 5px; 
+        padding-bottom: 2px; 
+        transition: 0.3s;}
+      .nav-button:hover{
+        display: inline;
+        border-bottom: 3px solid rgb(241, 12, 23); 
+        border-radius: 5px; 
+        padding-bottom: 2px; 
+        transition: 0.3s;}
+      .home:hover{
+        display: inline;
+        border-bottom: 3px solid rgb(241, 12, 23); 
+        border-radius: 5px; 
+        padding-bottom: 2px; 
+        transition: 0.3s;}
+      #dropdownMenu a:hover{
+        color: red;
+      }
+      
+    </style>
+
+    <!-- home> Automotive tinting -->
+    <div class="text-xl mx-10 pt-20 md:mx-20 text-gray-500" >
+      <a href="index.html" class="text-yellow-400">Home</a>&nbsp;<i class="fa-solid fa-chevron-right"></i> &nbsp;Paint Protection Film 
+    </div>
+    <hr class="mt-4 " style="border-bottom:2px solid rgb(228, 221, 221);">
+
+    <!-- Commercel&Residential tinting -->
+    <section class=" text-white pt-10 pb-3 mb-12 ">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-3 text-black">Paint Protaction Film</h2>
+            <p class="max-w-2xl mx-auto mb-12 text-black">
+              Protect your vehicle’s paint with our expert paint protection film—enhancing durability, resale value, and defense against scratches and debris.</p>
+    
                 <!-- image  -->
-              <div>
-                <video src="https://videos.pexels.com/video-files/6159290/6159290-hd_1920_1080_30fps.mp4" muted autoplay loop class="w-full "></video>
+              <div class="m-12">
+                <img src="https://tinyurl.com/tb4mub7d"   alt="image">
               </div>
-              <!-- about tinting -->
-              <div class="text-black lg:text-start">
-                <h1 class="text-2xl font-semibold mb-2"> Paint Protection Film: Ultimate Defense for Your Vehicle</h1>
-                <p class="mb-2">Paint Protection Film (PPF) is a high-quality, transparent layer designed to safeguard your vehicle’s paint from damage. This durable, self-healing film protects against scratches, rock chips, and environmental contaminants, keeping your car looking brand new.</p>
+              <!-- about ppf -->
+              <div class="text-black lg:text-start m-16">
+                <h1 class="text-2xl font-semibold mb-2"> Paint Protection Film: Shield, Preserve, and Enhance</h1>
+                <p class="mb-5">Paint Protection Film (PPF) is a high-quality, transparent layer applied to your vehicle’s surface to safeguard it from everyday wear and tear. It protects against scratches, rock chips, and environmental damage while maintaining the original paint finish.</p>
                 
-                <h4 class="text-xl font-semibold mb-2">Benefits of Paint Protection Film</h4>
-                <p class="text-start mb-1"><span class="font-semibold">  Superior Protection :   </span> Shields against rock chips, scratches, and road debris.</p>
-                <P class="text-start mb-1"> <span class="font-semibold"> Self-Healing Technology  : </span> Minor scratches and swirl marks disappear with heat exposure.</p>
-                <p class="text-start mb-1"> <span class="font-semibold">UV & Stain Resistance  : </span> Prevents paint fading and discoloration caused by sun exposure and contaminants.</p>
-                <p class="text-start mb-1"><span class="font-semibold">Invisible & Seamless Finish : </span> A crystal-clear, non-yellowing film that preserves your car’s original look.</p>
-                <p class="text-start mb-1"><span class="font-semibold">Low Maintenance & Long-Lasting : </span>Reduces the need for frequent polishing and waxing while extending the life of your paint.</p>
+                <h4 class="text-xl font-semibold mb-2">Benefits of Pain Protaction Film</h4>
+                <p class="text-start mb-1"><span class="font-semibold"> Scratch & Chip Resistance :</span> Acts as a durable barrier against road debris, gravel, and minor abrasions.</p>
+                <P class="text-start mb-1"> <span class="font-semibold"> UV & Stain Protection :</span> Prevents paint fading and discoloration caused by UV rays, bird droppings, and harsh weather.</p>
+                <p class="text-start mb-1"> <span class="font-semibold">Self-Healing Technology :</span>  Minor scratches and swirl marks disappear with heat exposure, keeping your car looking flawless.</p>
+                <p class="text-start mb-1"><span class="font-semibold"> Easy Maintenance :</span>  Reduces the need for frequent waxing and polishing, preserving your vehicle’s shine.</p>
+                <p class="text-start mb-1"><span class="font-semibold">Increased Resale Value :</span> Maintains the factory paint condition, making your vehicle more attractive to buyers.</p>
               </div>
+
+              <div class="w-full text-center bg-white pt-12">
+                <div class="container mx-auto px-4">
+                  <div class="text-center text-black">
+                      <h2 class="text-2xl font-bold uppercase text-red-500">Packages</h2>
+                      <h4 class="text-lg text-red-500">* Prices may vary due to vehicle size & condition. Prices do not include HST</h4>
+                      <div class="w-16 h-1 bg-primary mx-auto my-4 text-red-500 mb-12 "></div>
+                  </div>
+                  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 text-black ">
+                      <!-- Package Card -->
+                      <div class="bg-white shadow-lg rounded-lg overflow-hidden text-start p-4">
+                          <img src="https://detailingworld.s3.ca-central-1.amazonaws.com/prod/wp-content/uploads/2022/12/24053742/1-1.jpg" alt="Partial Front">
+                          <div class="text-xl font-bold my-4">Partial Front</div>
+                          <div>Partial Hood & Fenders, Front Bumper & Side Mirrors</div><hr>
+                          <div class="text-black ">Xpel Paint Protection Film</div><hr>
+                          <div class="text-black ">10 Year Warranty</div><hr>
+                          <div class="text-black ">Best-in-class durability & appearance</div><hr>
+                          <div class="text-black ">No metal layers to cause interference with cell phone/radio.</div><hr>
+                          <div class="mt-3 space-y-1 ">
+                              <div class="flex justify-between">Ultimate Plus PPF  <span class="font-bold">$699</span></div><hr>
+                              <div class="flex justify-between">Stealth PPF <span class="font-bold"> $799</span></div><hr>
+                          </div>
+                      </div>
+                      
+                      <!-- Repeat for other packages -->
+                      <div class="bg-white shadow-lg rounded-lg overflow-hidden text-start  p-4">
+                          <img src="https://detailingworld.s3.ca-central-1.amazonaws.com/prod/wp-content/uploads/2022/12/24053800/2-1.jpg" alt="Full Front">
+                          <div class="text-xl font-bold my-4">Full Front</div>
+                          <div>Hood, Front Fenders, Front Bumper & Side Mirrors</div><hr>
+                          <div class="text-black">Xpel Paint Protection Film</div><hr>
+                          <div class="text-black">10 Year Warranty</div><hr>
+                          <div class="text-black">Best-in-class durability & appearance</div><hr>
+                          <div class="text-black">No metal layers to cause interference with cell phone/radio.</div><hr>
+                          <div class="mt-3 space-y-1 ">
+                              <div class="flex justify-between">Ultimate Plus PPF <span class="font-bold"> $1499</span></div><hr>
+                              <div class="flex justify-between">Stealth PPF <span class="font-bold"> $1599</span></div><hr>
+                          </div>
+                      </div>
               
-            </div>
+                      <div class="bg-white shadow-lg rounded-lg overflow-hidden text-start p-4">
+                          <img src="https://detailingworld.s3.ca-central-1.amazonaws.com/prod/wp-content/uploads/2022/12/24053813/3-1.jpg" alt="Track Pack">
+                          <div class="text-xl font-bold my-4">Track Pack</div>
+                          <div>Hood, Front Fenders, Bumper, Side Mirrors, Rocker Panels</div><hr>
+                          <div class="text-black">Xpel Paint Protection Film</div><hr>
+                          <div class="text-black">10 Year Warranty</div><hr>
+                          <div class="text-black">Best-in-class durability & appearance</div><hr>
+                          <div class="text-black">No metal layers to cause interference with cell phone/radio.</div><hr>
+                          <div class="mt-3 space-y-1  ">
+                              <div class="flex justify-between">Ultimate Plus PPF <span class="font-bold"> $1999</span></div><hr>
+                              <div class="flex justify-between">Stealth PPF <span class="font-bold"> $2099</span></div><hr>
+                          </div>
+                      </div>
+              
+                      <div class="bg-white shadow-lg rounded-lg overflow-hidden text-start p-4">
+                          <img src="https://detailingworld.s3.ca-central-1.amazonaws.com/prod/wp-content/uploads/2022/12/24053711/4-1.jpg" alt="Full Car">
+                          <div class="text-xl font-bold my-4">Full Car</div>
+                          <div>All Painted Surface-red-500</div> <hr>
+                          <div class="text-black">Xpel Paint Protection Fil-red-500</div> <hr>
+                          <div class="text-black">10 Year Warrant-red-500</div> <hr>
+                          <div class="text-black">Best-in-class durability & appearanc-red-500</div> <hr>
+                          <div class="text-black">No metal layers to cause interference with cell phonblack</div> <hr>
+                          <div class="mt-3 space-y-1 ">
+                              <div class="flex justify-between">Ultimate Plus PPF <span class="font-bold"> $4299</span></div><hr>
+                              <div class="flex justify-between">Stealth PPF <span class="font-bold"> $4499</span></div><hr></div> <hr>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+                          </div>
+            
+              
+            
         </div>
     </section>
-     <!-- Types Of Window Tintingn -->
-    <div class="text-center mb-16">
-        <a href="paint-protaction-booking.html"><button class="bg-orange-500 text-white px-5 py-2 rounded-lg hover:bg-orange-600">Book Now</button></a>
-        </a></div>
-    </div>
-
-    
-    
-  <!-- footer -->
-  <div id="root">
-    <footer id="footer" class="bg-neutral-900 text-white pt-16 pb-8">
-      <div class="container mx-auto px-4">
-        <div class="grid md:grid-cols-4  gap-8 mb-12">
-          <div class="animate__animated animate__fadeIn">
-            <h3 class="text-xl font-bold mb-4 text-center">A5 Window Tint</h3>
-            <p class="text-gray-400 mb-4 text-center ">Professional window tinting
-              services with quality and expertise you can trust.
-            </p>
-            <div class="flex justify-center space-x-4 ">
-              <a href="#"
-                class="text-gray-400 hover:text-white transition-colors">
-                <svg class="w-6 h-6" fill="currentColor"
-                  viewBox="0 0 24 24">
-                  <path
-                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z">
-                  </path>
-                </svg>
-              </a>
-              <a href="#"
-                class="text-gray-400 hover:text-white transition-colors">
-                <svg class="w-6 h-6" fill="currentColor"
-                  viewBox="0 0 24 24">
-                  <path
-                    d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z">
-                  </path>
-                </svg>
-              </a>
-              <a href="#"
-                class="text-gray-400 hover:text-white transition-colors">
-                <svg class="w-6 h-6" fill="currentColor"
-                  viewBox="0 0 24 24">
-                  <path
-                    d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z">
-                  </path>
-                </svg>
-              </a>
-            </div>
-          </div>
-
-          <div class="animate__animated animate__fadeIn text-center">
-            <h3 class="text-xl font-bold mb-4">Quick Links</h3>
-            <ul class="space-y-2">
-
-              <li><a href="services.html"
-                  class="text-gray-400 hover:text-white transition-colors">Services</a></li>
-
-              <li><a
-                  href="index.html#testimonials"
-                  class="text-gray-400 hover:text-white transition-colors">Testimonials</a></li>
-              <li><a href="index.html#about"
-                  class="text-gray-400 hover:text-white transition-colors">About</a></li>
-              <li><a href="contact.html"
-                  class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
-            </ul>
-          </div>
-
-          <div class="animate__animated animate__fadeIn text-center">
-            <h3 class="text-xl font-bold mb-4 lg:text-start">Business Hours</h3>
-            <ul class=" text-gray-400 ">
-              <li class="flex gap-7 lg:gap-12 business-hours" style="">
-                  <span>Monday <br> To <br>Sunday</span>
-                  <span>11:00 AM <br> To <br>7:00 PM</span>
-              </li>
-              
-          </ul>
-          </div>
-
-          <div class="animate__animated animate__fadeIn ">
-            <h3 class="text-xl font-bold mb-4 text-center lg:text-start ">Contact Info</h3>
-            <ul class="space-y-4 text-gray-400">
-              <li class="flex items-start add">
-                <svg class="w-6 h-6 mt-1 mr-3" fill="none"
-                  stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                  <path stroke-linecap="round" stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                  </svg><a href="https://maps.app.goo.gl/ujH186XkK6o6L7Lw7" target="_blank">
-                    222 Rolson St, Oshawa, ON L1G 7Y9, Canada</a>
-              </li>
-              <li class="flex items-center">
-                <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor"
-                  viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
-                  </path>
-                </svg><a href="tel:+14168419697">
-                +1 416-841-9697</a>
-              </li>
-              <li class="flex items-center">
-                <svg class="w-6 h-6 mr-3 md:mr-1  lg:mr-3" fill="none" stroke="currentColor"
-                  viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
-                  </path>
-                </svg><a href="mailto:info@A5tint.com">
-                  info@A5tint.com</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="border-t border-neutral-800 pt-8">
-          <div
-            class="flex flex-col md:flex-row justify-between items-center">
-            <p class="text-gray-400 text-sm">© 2024 A5 Tint. All rights
-              reserved.</p>
-            <div class="flex space-x-6 mt-4 md:mt-0">
-              <a href="#"
-                class="text-gray-400 hover:text-white text-sm transition-colors">Privacy
-                Policy</a>
-              <a href="#"
-                class="text-gray-400 hover:text-white text-sm transition-colors">Terms
-                of Service</a>
-              <a href="#"
-                class="text-gray-400 hover:text-white text-sm transition-colors">Sitemap</a>
-            </div>
-          </div>
-        </div>
+    <div class="text-center">
+      <a href="paint-protaction-booking.html" class="inline-block  bg-orange-500 text-white font-semibold px-3 py-2 rounded-lg  mb-12 " >Book Now </a>
       </div>
-    </footer>
-  </div>
-  <style>
-     @media (max-width: 768px) { .business-hours{ justify-content: center;align-items: center ;}}
-  </style>
+
+    
+    
+    <!-- footer -->
+    <div id="root">
+      <footer id="footer" class="bg-neutral-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+          <div class="grid md:grid-cols-4  gap-8 mb-12">
+            <div class="animate__animated animate__fadeIn">
+              <h3 class="text-xl font-bold mb-4 text-center">A5 Window Tint</h3>
+              <p class="text-gray-400 mb-4 text-center ">Professional window tinting
+                services with quality and expertise you can trust.
+              </p>
+              <div class="flex justify-center space-x-4 ">
+                <a href="#"
+                  class="text-gray-400 hover:text-white transition-colors">
+                  <svg class="w-6 h-6" fill="currentColor"
+                    viewBox="0 0 24 24">
+                    <path
+                      d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z">
+                    </path>
+                  </svg>
+                </a>
+                <a href="#"
+                  class="text-gray-400 hover:text-white transition-colors">
+                  <svg class="w-6 h-6" fill="currentColor"
+                    viewBox="0 0 24 24">
+                    <path
+                      d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z">
+                    </path>
+                  </svg>
+                </a>
+                <a href="#"
+                  class="text-gray-400 hover:text-white transition-colors">
+                  <svg class="w-6 h-6" fill="currentColor"
+                    viewBox="0 0 24 24">
+                    <path
+                      d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z">
+                    </path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <div class="animate__animated animate__fadeIn text-center">
+              <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+              <ul class="space-y-2">
+
+                <li><a href="services.html"
+                    class="text-gray-400 hover:text-white transition-colors">Services</a></li>
+
+                <li><a
+                    href="index.html#testimonials"
+                    class="text-gray-400 hover:text-white transition-colors">Testimonials</a></li>
+                <li><a href="index.html#about"
+                    class="text-gray-400 hover:text-white transition-colors">About</a></li>
+                <li><a href="contact.html"
+                    class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+              </ul>
+            </div>
+
+            <div class="animate__animated animate__fadeIn text-center">
+              <h3 class="text-xl font-bold mb-4 lg:text-start">Business Hours</h3>
+              <ul class=" text-gray-400 ">
+                <li class="flex gap-7 lg:gap-12 business-hours" style="">
+                    <span>Monday <br> To <br>Sunday</span>
+                    <span>11:00 AM <br> To <br>7:00 PM</span>
+                </li>
+                
+            </ul>
+            </div>
+
+            <div class="animate__animated animate__fadeIn ">
+              <h3 class="text-xl font-bold mb-4 text-center lg:text-start ">Contact Info</h3>
+              <ul class="space-y-4 text-gray-400">
+                <li class="flex items-start add">
+                  <svg class="w-6 h-6 mt-1 mr-3" fill="none"
+                    stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    </svg><a href="https://maps.app.goo.gl/ujH186XkK6o6L7Lw7" target="_blank">
+                      222 Rolson St, Oshawa, ON L1G 7Y9, Canada</a>
+                </li>
+                <li class="flex items-center">
+                  <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                    </path>
+                  </svg><a href="tel:+14168419697">
+                  +1 416-841-9697</a>
+                </li>
+                <li class="flex items-center">
+                  <svg class="w-6 h-6 mr-3 md:mr-1  lg:mr-3" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                    </path>
+                  </svg><a href="mailto:info@A5tint.com">
+                    info@A5tint.com</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="border-t border-neutral-800 pt-8">
+            <div
+              class="flex flex-col md:flex-row justify-between items-center">
+              <p class="text-gray-400 text-sm">© 2024 A5 Tint. All rights
+                reserved.</p>
+              <div class="flex space-x-6 mt-4 md:mt-0">
+                <a href="#"
+                  class="text-gray-400 hover:text-white text-sm transition-colors">Privacy
+                  Policy</a>
+                <a href="#"
+                  class="text-gray-400 hover:text-white text-sm transition-colors">Terms
+                  of Service</a>
+                <a href="#"
+                  class="text-gray-400 hover:text-white text-sm transition-colors">Sitemap</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <style>
+       @media (max-width: 768px) { .business-hours{ justify-content: center;align-items: center ;}}
+    </style>
 </body>
 
 </html>

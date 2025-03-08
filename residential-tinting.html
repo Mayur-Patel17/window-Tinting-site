@@ -1563,138 +1563,245 @@
       background-image: url(https://images.pexels.com/photos/120049/pexels-photo-120049.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
       background-size: cover;
     }
+  
     
-    .nav-button:hover{ background: linear-gradient(to bottom left, #8b5cf6, #d946ef);}
+    @media (max-width: 768px) {
+       .business-hours{ justify-content: center;align-items: center ;
+      }
+    }
+    
   </style>
   </head>
-  <body class="">
+
+  <body class="antialiased text-gray-800 min-h-screen flex flex-col">
+    <!-- Skip to main content link for accessibility -->
+    <a href="#"
+      class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-white focus:text-black">
+      Skip to main content
+    </a>
+
+    <!-- Header -->
+    <header class="relative z-50 bg-white dark:bg-gray-900">
+      <!-- Header content goes here -->
+    </header>
+
+    <!-- Main content area -->
+    <main id="main-content" class="flex-1 relative h-full">
+      <!-- Content will be injected here -->
+    </main>
+
     <!-- navbar -->
 
     <div id="root">
-        <section id="header" class="relative">
-            <nav class="fixed w-full z-50 bg-neutral-900/95 backdrop-blur-sm">
-                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div class="flex justify-between items-center h-16">
-                        <div class="flex-shrink-0">
-                            <a href="index.html"
-                                class="text-white font-bold text-xl">A5
-                                Tint</a>
-                        </div>
-
-                        <div class="hidden md:block">
-                            <div class="ml-10 flex items-center space-x-4">
-                                <a href="index.html#hero"
-                                    class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
-                                <a href="services.html"
-                                    class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Services</a>
-
-                                <a href="about.html"
-                                    class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
-
-                                <!-- <a href="index.html#about"
-                                    class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a> -->
-                                <a href="contact.html"
-                                    class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
-
-                                <a href="booking.html"
-                                    class="inline-block bg-gradient-to-bl from-cyan-300 to-blue-900 text-white font-semibold px-3 py-2 rounded-lg  nav-button" >
-                                    Start Your Project
-                                   </a>
-                            </div>
-                        </div>
-
-                        <div class="md:hidden">
-                            <button id="menuBtn"
-                                class="text-gray-400 hover:text-white focus:outline-none">
-                                <svg class="h-6 w-6" fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor">
-                                    <path stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                        d="M4 6h16M4 12h16M4 18h16">
-                                    </path>
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
+      <section id="header" class="relative">
+        <nav class="fixed w-full z-50 bg-neutral-900/95 backdrop-blur-sm">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+              <div class="flex-shrink-0">
+                <a href="index.html" class="text-white font-bold text-xl">A5 Tint</a>
+              </div>
+    
+              <div class="hidden md:flex items-center space-x-4">
+                <a href="index.html"
+                  class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors home">Home</a>
+    
+                <!-- Services Dropdown -->
+                <div class="relative group" id="dropdownContainer">
+                  <button  id="dropdownButton" class="text-gray-300 hover:text-white px-4 py-2 rounded-lg focus:outline-none service">
+                    Services
+                  </button>
+                  <!-- Dropdown Menu -->
+                  <div id="dropdownMenu"
+                    class="absolute left-0 mt-3 w-60 bg-white border rounded-lg shadow-lg opacity-0 invisible transition-opacity duration-300 group-hover:opacity-100 group-hover:visible">
+                    <a href="automotive-tinting.html" class="block px-4 py-1 pt-4 ">Automotive Tinting</a>
+                    <a href="residential-tinting.html" class="block px-4 py-1 text-red-500 ">Commercial & Residential Tinting</a>
+                    <a href="paint-protection.html" class="block px-4 py-1 ">Paint protaction Film</a>
+                    <a href="ceramic-coating.html" class="block px-4 py-1 ">Ceramic Coating</a>
+                    <a href="car-detaling.html" class="block px-4 py-1 ">Car Detailing</a>
+                    <a href="custom-wrap.html" class="block px-4 py-1 pb-4 ">Customw Wraps</a>
+                  </div>
                 </div>
-
-                <!-- Mobile menu -->
-                <div id="mobileMenu" class="hidden md:hidden bg-neutral-900">
-                    <div class="px-2 pt-2 pb-3 space-y-1">
-                        <a href="index.html#hero"
-                            class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Home</a>
-                        <a href="services.html"
-                            class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Services</a>
-
-                        <a href="about.html"
-                            class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About</a>
-
-                        <!-- <a href
-                            class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About</a> -->
-                        <a href="contact.html"
-                            class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact</a>
-                        <a href="booking.html"
-                            class="inline-block bg-gradient-to-bl from-cyan-300 to-blue-900 text-white font-semibold px-3 py-2 rounded-lg  nav-button" >
-                            Start Your Project
-                           </a>
-                    </div>
-                </div>
-            </nav>
-
-            <!-- <div class="min-h-[70vh] bg-neutral-900 flex items-center">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div class="text-center">
-            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 animate__animated animate__fadeIn">
-              Professional Window Tinting Services
-            </h1>
-            <p class="text-xl text-gray-300 mb-8 animate__animated animate__fadeIn animate__delay-1s">
-              Premium Quality &amp; Expert Installation
-            </p>
-            <div class="animate__animated animate__fadeIn animate__delay-2s">
-              <a href="https://oshawa-tint-pro6gf6.rollout.site/contact" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-lg transition-colors inline-block">
-                Get Free Quote
-              </a>
+    
+                <a href="about.html"
+                  class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors about">About</a>
+    
+                <a href="contact.html"
+                  class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors contact">Contact</a>
+    
+                <a href="booking.html"
+                  class="inline-block hover:text-white text-gray-300 text-sm font-medium px-3 py-2 rounded-lg nav-button">
+                  Start Your Project
+                </a>
+              </div>
+    
+              <div class="md:hidden">
+                <button id="menuBtn" class="text-gray-400 hover:text-white focus:outline-none">
+                  <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M4 6h16M4 12h16M4 18h16"></path>
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-      </div> -->
-        </section>
+    
+          <!-- Mobile menu -->
+<div id="mobileMenu" class="hidden md:hidden bg-neutral-900">
+  <div class="px-2 pt-2 pb-3 space-y-1">
+    <a href="index.html" class="text-gray-300 hover:text-red-500 block px-3 py-2 rounded-md text-base font-medium">Home</a>
 
-        <script>
+    <!-- Dropdown Menu -->
+    <div class="relative">
+      <!-- Dropdown Button -->
+      <button class="dropdown-btn flex justify-between items-center w-full px-3 py-2  text-white rounded-lg focus:outline-none focus:text-yellow-500 focus:font-semibold">
+        Services
+        <svg class="dropdown-arrow w-4 h-4 transition-transform duration-300 ease-in-out" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+
+      <!-- Dropdown Content -->
+      <ul class="dropdown-menu hidden bg-neutral-900  rounded-lg text-white font-medium w-full mt-1 ">
+        <li><a href="automotive-tinting.html" class="block mx-8 py-2  ">Window Tinting</a></li>
+        <li><a href="residential-tinting.html" class="block mx-8 py-2 text-red-500 ">Commercial & Residential Tinting</a></li>
+        <li><a href="paint-protection.html" class="block mx-8 py-2 ">Paint protaction Film</a></li>
+        <li><a href="ceramic-coating.html" class="block mx-8 py-2 ">Ceramic Coating</a></li>
+        <li><a href="car-detaling.html" class="block mx-8 py-2 ">Car Detailing</a></li>
+        <li><a href="custom-wrap.html" class="block mx-8 py-2 ">Customw Wraps</a></li>
+      </ul>
+    </div>
+
+    <a href="about.html" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About us</a>
+    <a href="contact.html" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+    <a href="booking.html" class="inline-block text-gray-300 hover:font-medium px-3 py-2 rounded-lg">Start Your Project</a>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll(".dropdown-btn").forEach((btn) => {
+    btn.addEventListener("click", function (event) {
+      event.stopPropagation();
+      
+      const dropdownMenu = this.nextElementSibling;
+      const dropdownArrow = this.querySelector(".dropdown-arrow");
+
+      const isOpen = !dropdownMenu.classList.contains("hidden");
+
+      // Close all dropdowns first
+      document.querySelectorAll(".dropdown-menu").forEach(menu => {
+        menu.classList.add("hidden");
+      });
+      document.querySelectorAll(".dropdown-arrow").forEach(arrow => {
+        arrow.classList.remove("rotate-180");
+      });
+
+      // Open the clicked dropdown if it was closed
+      if (!isOpen) {
+        dropdownMenu.classList.remove("hidden");
+        dropdownArrow.classList.add("rotate-180");
+      }
+    });
+  });
+
+  // Close dropdowns when clicking outside
+  document.addEventListener("click", () => {
+    document.querySelectorAll(".dropdown-menu").forEach(menu => menu.classList.add("hidden"));
+    document.querySelectorAll(".dropdown-arrow").forEach(arrow => arrow.classList.remove("rotate-180"));
+  });
+</script>
+
+        </nav>
+      </section>
+    
+      <script>
         const menuBtn = document.getElementById('menuBtn');
         const mobileMenu = document.getElementById('mobileMenu');
-  
+    
         menuBtn.addEventListener('click', () => {
           mobileMenu.classList.toggle('hidden');
         });
-  
+    
         // Close mobile menu when clicking outside
         document.addEventListener('click', (e) => {
           if (!menuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
             mobileMenu.classList.add('hidden');
           }
         });
+         // Dropdown Menu Behavior
+    dropdownContainer.addEventListener('mouseenter', () => {
+      clearTimeout(timeout); // Cancel hiding if mouse re-enters
+      dropdownMenu.classList.remove('opacity-0', 'invisible');
+    });
+
+    dropdownContainer.addEventListener('mouseleave', () => {
+      timeout = setTimeout(() => {
+        dropdownMenu.classList.add('opacity-0', 'invisible');
+      }, 300); // Delay hiding by 0.3s
+    });
+        
       </script>
     </div>
-    <!-- services -->
-    <section class=" text-white pt-20 pb-6 mb-12">
+    
+    
+    <style>
+      .service{
+        display: inline;
+        border-bottom: 3px solid rgb(241, 12, 23); 
+        border-radius: 5px; 
+        padding-bottom: 2px; 
+        transition: 0.3s;}
+      .about:hover{
+        display: inline;
+        border-bottom: 3px solid rgb(241, 12, 23); 
+        border-radius: 5px; 
+        padding-bottom: 2px; 
+        transition: 0.3s;}
+      .contact:hover{
+        display: inline;
+        border-bottom: 3px solid rgb(241, 12, 23); 
+        border-radius: 5px; 
+        padding-bottom: 2px; 
+        transition: 0.3s;}
+      .nav-button:hover{
+        display: inline;
+        border-bottom: 3px solid rgb(241, 12, 23); 
+        border-radius: 5px; 
+        padding-bottom: 2px; 
+        transition: 0.3s;}
+      .home:hover{
+        display: inline;
+        border-bottom: 3px solid rgb(241, 12, 23); 
+        border-radius: 5px; 
+        padding-bottom: 2px; 
+        transition: 0.3s;}
+      #dropdownMenu a:hover{
+        color: red;
+      }
+      
+    </style>
+
+    <!-- home> Automotive tinting -->
+    <div class="text-xl mx-10 pt-20 md:mx-20 text-gray-500" >
+      <a href="index.html" class="text-yellow-400">Home</a>&nbsp;<i class="fa-solid fa-chevron-right"></i> &nbsp;Commercial & Residential Tinting   
+    </div>
+    <hr class="mt-4 " style="border-bottom:2px solid rgb(228, 221, 221);">
+
+    <!-- Commercel&Residential tinting -->
+    <section class=" text-white pt-10 pb-3 mb-12 ">
         <div class="container mx-auto text-center">
-            <h2 class="text-4xl font-bold mb-8 text-black">Window Tinting</h2>
+            <h2 class="text-4xl font-bold mb-3 text-black">Commercial & Residential Tinting</h2>
             <p class="max-w-2xl mx-auto mb-12 text-black">
-                Enhance your vehicle’s style, privacy, and UV protection with our professional window tinting services.
+                Boost style, privacy, and UV protection with our expert commercial and residential window tinting—enhancing comfort, security, and energy efficiency.
             </p>
     
-            <div class="grid lg:grid-cols-2 gap-8 px-6">
                 <!-- image  -->
-              <div>
-                <video src="https://tinyurl.com/yc66tnk9" muted autoplay loop class="w-full "></video>
+              <div class="m-12">
+                <img src="https://tinyurl.com/4w686d2u"  style="height: 25rem; width:100rem;" alt="image">
               </div>
               <!-- about tinting -->
-              <div class="text-black lg:text-start">
+              <div class="text-black lg:text-start m-16">
                 <h1 class="text-2xl font-semibold mb-2"> Window Tinting: Style, Protection, and Comfort</h1>
-                <p class="mb-2">Window tinting is a popular way to enhance the look, functionality, and comfort of vehicles, homes, and businesses. It involves applying a thin film to the glass that helps reduce glare, block harmful UV rays, and provide privacy.</p>
+                <p class="mb-5">Window tinting is a popular way to enhance the look, functionality, and comfort of vehicles, homes, and businesses. It involves applying a thin film to the glass that helps reduce glare, block harmful UV rays, and provide privacy.</p>
                 
                 <h4 class="text-xl font-semibold mb-2">Benefits of Window Tinting</h4>
                 <p class="text-start mb-1"><span class="font-semibold"> UV Protection :</span> Blocks up to 99% of harmful UV rays, reducing skin damage and preventing interior fading.</p>
@@ -1703,159 +1810,94 @@
                 <p class="text-start mb-1"><span class="font-semibold">Privacy & Security :</span> Enhances privacy while adding an extra layer of protection against break-ins.</p>
                 <p class="text-start mb-1"><span class="font-semibold">Enhanced Appearance :</span> Gives a sleek, stylish look to vehicles and buildings.</p>
               </div>
-              
+
+              <div class="w-full text-center bg-white pt-12">
+                <div class="container mx-auto">
+                    <div class="text-center text-black mb-8">
+                        <h2 class="text-2xl font-bold uppercase text-red-500">Packages</h2>
+                        <h4 class="text-lg text-red-500">* Prices may vary based on window size and condition. HST not included.</h4>
+                        <div class="w-16 h-1 bg-red-500 mx-auto mt-2"></div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-black m-8">
+                        <!-- XPEL CS -->
+                        <div class="bg-gray-100 py-4 shadow rounded-lg border"><a href="residential-tinting-booking.html">
+                            <h2 class="text-3xl mb-10 font-bold mt-4">XPEL CS</h2>
+                            <div class="mt-4 space-y-2 text-start">
+                                <p class="flex justify-between px-3 font-bold"><span class="font-normal">WARRANTY:</span> 5 Years</p><hr>
+                                <p class="px-3"><span class="font-normal">CARBON</span></p><hr>
+                                <p class="px-3">Reduces Glare</p><hr>
+                                <p class="flex justify-between px-3 font-bold"><span class="font-normal">UV REJECTION:</span> 99%</p><hr>
+                                <p class="flex justify-between bg-red-500 text-white px-3">IR HEAT REJECTION: <span class="font-bold"> 27% – 28%</span></p><hr>
+                            </div>
+                            <div class="mt-4 space-y-1 text-start px-3">
+                                <p class="flex justify-between">2 FRONT WINDOWS: <span class="font-bold">$119</span></p><hr>
+                                <p class="flex justify-between">COUPE / SEDAN / CROSSOVER: <span class="font-bold">$219</span></p><hr>
+                                <p class="flex justify-between">SUV / MINIVAN: <span class="font-bold">$249</span></p><hr> 
+                                <p class="flex justify-between">FULL WINDSHIELD: <span class="font-bold">N/A</span></p><hr>
+                            </div></a>
+                        </div>
+                        <!-- XPEL HP -->
+                        <div class="bg-gray-100 py-4 shadow rounded-lg border"><a href="residential-tinting-booking.html">
+                            <h2 class="text-3xl font-bold mb-10 mt-4">XPEL HP</h2>
+                            <div class="mt-4 space-y-2  text-start">
+                                <p class="flex justify-between font-bold px-3"><span class="font-normal">WARRANTY:</span> LIFETIME</p><hr>
+                                <p class="px-3"><span class="font-normal">HYBRID METALLIZED</span></p><hr>
+                                <p class="px-3">Heat Rejection</p><hr>
+                                <p class="flex justify-between font-bold px-3"><span class="font-normal">UV REJECTION:</span> 99%</p><hr>
+                                <p class="flex justify-between bg-red-500 text-white px-3">IR HEAT REJECTION:<span class="font-bold">43% – 46%</span></p><hr>
+                            </div>
+                            <div class="mt-4 space-y-1  text-start px-3">
+                                <p class="flex justify-between">2 FRONT WINDOWS: <span class="font-bold">$129</span></p><hr>
+                                <p class="flex justify-between">COUPE / SEDAN / CROSSOVER: <span class="font-bold">$279</span></p><hr>
+                                <p class="flex justify-between">SUV / MINIVAN: <span class="font-bold">$299</span></p><hr>
+                                <p class="flex justify-between">FULL WINDSHIELD: <span class="font-bold"> N/A</span></p><hr>
+                            </div></a>
+                        </div>
+                        <!-- XPEL XR -->
+                        <div class="bg-gray-100 py-4 shadow border rounded-lg"><a href="residential-tinting-booking.html">
+                            <h2 class="text-3xl mb-10 font-bold mt-4 ">XPEL XR</h2>
+                            <div class="mt-4 space-y-2 text-start">
+                                <p class="flex justify-between px-3 font-bold"><span class="font-normal">WARRANTY:</span> LIFETIME</p> <hr>
+                                <p class="px-3"><span class="font-normal">NANO-CERAMIC</span></p> <hr>
+                                <p class="px-3">Superior Heat Rejection</p> <hr>
+                                <p class="flex justify-between font-bold px-3"><span class="font-normal">UV REJECTION:</span> 99%</p> <hr>
+                                <p class="flex justify-between text-white bg-red-500 px-3">IR HEAT REJECTION: <span class="font-bold"> 83% – 88%</span></p> <hr>
+                            </div>
+                            <div class="mt-4 space-y-1 text-start px-3"> 
+                                <p class="flex justify-between">2 FRONT WINDOWS: <span class="font-bold">$149</span></p> <hr>
+                                <p class="flex justify-between">COUPE / SEDAN / CROSSOVER: <span class="font-bold">$339</span></p> <hr>
+                                <p class="flex justify-between">SUV / MINIVAN: <span class="font-bold">$369</span></p> <hr>
+                                <p class="flex justify-between">FULL WINDSHIELD: <span class="font-bold">$239</span></p> <hr>
+                            </div></a>
+                        </div>
+                        <!-- XPEL XR Plus -->
+                        <div class="bg-gray-100 py-4 shadow border rounded-lg"><a href="residential-tinting-booking.html">
+                            <h2 class="text-3xl font-bold mb-10 mt-4">XPEL XR Plus</h2>
+                            <div class="mt-4 space-y-2 text-start">
+                                <p class="flex justify-between font-bold px-3"><span class="font-normal">WARRANTY:</span> LIFETIME</p> <hr>
+                                <p class="px-3"><span class="">DUAL NANO-CERAMIC</span></p> <hr>
+                                <p class="px-3">Highest Heat Rejection</p> <hr>
+                                <p class="flex justify-between font-bold px-3"><span class="font-normal">UV REJECTION:</span> 99%</p> <hr>
+                                <p class="flex justify-between px-3 bg-red-500 text-white">IR HEAT REJECTION: <span class="font-bold"> 92% – 98%</span></p> <hr>
+                            </div>
+                            <div class="mt-4 space-y-1 text-start px-3">
+                                <p class="flex justify-between">2 FRONT WINDOWS: <span class="font-bold">$189</span></p> <hr>
+                                <p class="flex justify-between">COUPE / SEDAN / CROSSOVER: <span class="font-bold">$549</span></p> <hr>
+                                <p class="flex justify-between">SUV / MINIVAN: <span class="font-bold">$599</span></p> <hr>
+                                <p class="flex justify-between">FULL WINDSHIELD: <span class="font-bold">$289</span></p> <hr>
+                            </div></a>
+                        </div>
+                    </div>                </div>
             </div>
+            
+              
+            
         </div>
     </section>
-     <!-- Types Of Window Tintingn -->
-     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16 mx-4" >
-      <!-- Automotive Tinting -->
-      <div
-        class="bg-neutral-200 rounded-lg p-6 shadow-lg transition-transform hover:scale-105 animate__animated animate__fadeIn">
-        <div
-          class="  rounded-lg flex items-center justify-center mb-4">
-          <img src="https://assets.newatlas.com/dims4/default/e082578/2147483647/strip/true/crop/1493x1080+0+0/resize/1493x1080!/quality/90/?url=http%3A%2F%2Fnewatlas-brightspot.s3.amazonaws.com%2Farchive%2Fcontinental-intelligent-glass-control-1.jpg" style="height: 12rem;" alt="automotive tinting">
-          
-        </div>
-        <h3 class="text-xl font-bold mb-3 ">Automotive Tinting</h3>
-        <p class="text-neutral-600 mb-4">Professional window tinting
-          for
-          all vehicle types with premium films and
-          expert installation.</p>
-        <ul class="space-y-2 text-neutral-600">
-          <li class="flex items-center">
-            <svg class="w-4 h-4 mr-2 text-blue-600"
-              fill="currentColor"
-              viewBox="0 0 20 20">
-              <path fill-rule="evenodd"
-                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                clip-rule="evenodd"></path>
-            </svg>
-            UV Protection
-          </li>
-          <li class="flex items-center">
-            <svg class="w-4 h-4 mr-2 text-blue-600"
-              fill="currentColor"
-              viewBox="0 0 20 20">
-              <path fill-rule="evenodd"
-                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                clip-rule="evenodd"></path>
-            </svg>
-            Heat Reduction
-          </li>
-          <li class="flex items-center">
-            <svg class="w-4 h-4 mr-2 text-blue-600"
-              fill="currentColor"
-              viewBox="0 0 20 20">
-              <path fill-rule="evenodd"
-                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                clip-rule="evenodd"></path>
-            </svg>
-            Glare Reduction
-          </li>
-        </ul>
-        <div>
-        <a href="automotive-tinting-booking.html" class="inline-block  bg-orange-500 text-white font-semibold px-3 py-2 rounded-lg mt-3  " >Book Now </a>
-        </div>
-        
+    <div class="text-center">
+      <a href="residential-tinting-booking.html" class="inline-block  bg-orange-500 text-white font-semibold px-3 py-2 rounded-lg  mb-12 " >Book Now </a>
       </div>
-
-      <!-- Residential Tinting -->
-      <div
-        class="bg-neutral-200 rounded-lg p-6 shadow-lg transition-transform hover:scale-105 animate__animated animate__fadeIn animate__delay-1s">
-        <div
-          class="  rounded-lg flex items-center justify-center mb-4">
-          <img src="https://nanoshield.com.au/wp-content/uploads/2017/06/comparisons-mobile.jpg" style="height: 12rem;" alt="">
-        </div>
-        <h3 class="text-xl font-bold mb-3 ">Residential Tinting</h3>
-        <p class="text-neutral-600 mb-4">Transform your home with our
-          residential window tinting solutions.</p>
-        <ul class="space-y-2 text-neutral-600">
-          <li class="flex items-center">
-            <svg class="w-4 h-4 mr-2 text-blue-600"
-              fill="currentColor"
-              viewBox="0 0 20 20">
-              <path fill-rule="evenodd"
-                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                clip-rule="evenodd"></path>
-            </svg>
-            Energy Savings
-          </li>
-          <li class="flex items-center">
-            <svg class="w-4 h-4 mr-2 text-blue-600"
-              fill="currentColor"
-              viewBox="0 0 20 20">
-              <path fill-rule="evenodd"
-                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                clip-rule="evenodd"></path>
-            </svg>
-            Privacy Enhancement
-          </li>
-          <li class="flex items-center">
-            <svg class="w-4 h-4 mr-2 text-blue-600"
-              fill="currentColor"
-              viewBox="0 0 20 20">
-              <path fill-rule="evenodd"
-                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                clip-rule="evenodd"></path>
-            </svg>
-            Furniture Protection
-          </li>
-        </ul>
-        <div>
-          <a href="residential-tinting-booking.html" class="inline-block  bg-orange-500 text-white font-semibold px-3 py-2 rounded-lg mt-3  " >Book Now </a>
-        </div>
-      </div>
-
-      <!-- Commercial Tinting -->
-      <div
-        class="bg-neutral-200 rounded-lg p-6 shadow-lg transition-transform hover:scale-105 animate__animated animate__fadeIn animate__delay-2s">
-        <div
-          class="  rounded-lg flex items-center justify-center mb-4">
-          <img src="https://americanwindowfilm.com/hs-fs/hubfs/Commercial-Window-Tinting/solar/commercial-window-tint.jpg?width=1280&height=720&name=commercial-window-tint.jpg" style="height: 12rem;" alt="commercial tinting">
-        </div>
-        <h3 class="text-xl font-bold mb-3">Commercial Tinting</h3>
-        <p class="text-neutral-600 mb-4">Professional tinting
-          solutions
-          for commercial properties and businesses.
-        </p>
-        <ul class="space-y-2 text-neutral-600">
-          <li class="flex items-center">
-            <svg class="w-4 h-4 mr-2 text-blue-600"
-              fill="currentColor"
-              viewBox="0 0 20 20">
-              <path fill-rule="evenodd"
-                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                clip-rule="evenodd"></path>
-            </svg>
-            Energy Efficiency
-          </li>
-          <li class="flex items-center">
-            <svg class="w-4 h-4 mr-2 text-blue-600"
-              fill="currentColor"
-              viewBox="0 0 20 20">
-              <path fill-rule="evenodd"
-                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                clip-rule="evenodd"></path>
-            </svg>
-            Improved Comfort
-          </li>
-          <li class="flex items-center">
-            <svg class="w-4 h-4 mr-2 text-blue-600"
-              fill="currentColor"
-              viewBox="0 0 20 20">
-              <path fill-rule="evenodd"
-                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                clip-rule="evenodd"></path>
-            </svg>
-            Professional Look
-          </li>
-        </ul>
-        <div>
-          <a href="commercial-tinting-booking.html" class="inline-block  bg-orange-500 text-white font-semibold px-3 py-2 rounded-lg mt-3  " >Book Now </a>
-        </div>
-      </div>
-    </div>
 
     
     
